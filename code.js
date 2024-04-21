@@ -51,4 +51,26 @@
 
 let nums = [1, 2];
 let [dos, uno] = nums;
-console.log(`dos es ${dos}`, `uno es ${uno}`);
+// console.log(`dos es ${dos}`, `uno es ${uno}`);
+
+let colors = ['red', 'green', 'blue', 'yellow', 'orange'];
+// let [color1, color2, color3] = colors;
+// console.log(color1, color2, color3);
+
+// let [color1, , color3, , color5, color6 = 'no more colors'] = colors;
+// console.log(color1, color3, color5, color6);
+
+let person = {
+	size: { height: 160, weight: 100 },
+	activities: { work: true, sports: 2, hobbies: true },
+	alive: true,
+};
+let {
+	size: { height, weight },
+	activities: { work, sports, hobbies },
+	alive,
+} = person;
+// console.log(height, weight, work, sports, hobbies, alive);
+
+let [color1, ...rest] = colors;
+console.log(color1, [...rest]);
