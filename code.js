@@ -73,4 +73,38 @@ let {
 // console.log(height, weight, work, sports, hobbies, alive);
 
 let [color1, ...rest] = colors;
-console.log(color1, [...rest]);
+// console.log(color1, [...rest]);
+
+//Kata 6k
+
+function oddCount(n) {
+	return Math.floor(n / 2);
+}
+// console.log(oddCount(7));
+
+//kata 6
+
+const rps = (p1, p2) => {
+	let msg = ['Player 1 won!', 'Player 2 won!', 'Draw!'];
+	switch (true) {
+		case p1 === 'scissors' && p2 === 'paper':
+			return msg[0];
+		case p1 === 'scissors' && p2 === 'rock':
+			return msg[1];
+		case p1 === 'paper' && p2 === 'scissors':
+			return msg[1];
+		case p1 === 'paper' && p2 === 'rock':
+			return msg[0];
+		case p1 === 'rock' && p2 === 'scissors':
+			return msg[0];
+		case p1 === 'rock' && p2 === 'paper':
+			return msg[1];
+		case p1 === 'scissors' && p2 === 'scissors':
+			return msg[2];
+		case p1 === 'paper' && p2 === 'paper':
+			return msg[2];
+		case p1 === 'rock' && p2 === 'rock':
+			return msg[2];
+	}
+};
+console.log(rps('scissors', 'paper'));
