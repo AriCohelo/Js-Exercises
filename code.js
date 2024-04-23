@@ -107,4 +107,46 @@ const rps = (p1, p2) => {
 			return msg[2];
 	}
 };
-console.log(rps('scissors', 'paper'));
+// console.log(rps('scissors', 'paper'));
+
+//kata 8k
+
+function smash(words) {
+	return words.join(' ');
+}
+// console.log(smash(['hello', 'world', 'this', 'is', 'great']));
+
+//kata 8k
+
+let palabra = 'palabra';
+// palabra = palabra.replace('a', '!');
+// console.log(palabra);
+function change(string) {
+	for (let letra of string) {
+		/[aeiouAEIOU]/g.test(letra)
+			? (string = string.replace(/[aeiouAEIOU]/g, '!'))
+			: null;
+	}
+	return string;
+}
+// console.log(change(palabra));
+
+function basicOp(operation, value1, value2) {
+	let result = '';
+	switch (true) {
+		case operation === '+':
+			result = `${value1} + ${value2} = ${value1 + value2}`;
+			break;
+		case operation === '-':
+			result = `${value1} - ${value2} = ${value1 - value2}`;
+			break;
+		case operation === '/':
+			result = `${value1} / ${value2} = ${value1 / value2}`;
+			break;
+		case operation === '*':
+			result = `${value1} * ${value2} = ${value1 * value2}`;
+			break;
+	}
+	return result;
+}
+console.log(basicOp('+', 4, 7));
